@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Results summary component</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;500;700;800&display=swap");
+
+      body {
+        margin: 0;
+        display: flex;
+        height: 100dvh;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-family: "Hanken Grotesk", sans-serif;
+      }
+
+      main {
+        min-width: 400px;
+        width: 700px;
+        max-width: 700px;
+        height: 450px;
+        border-radius: 2rem;
+        display: flex;
+        gap: 1%;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+
+      .result {
+        border-radius: 2rem;
+        padding-top: 10px;
+        flex-grow: 1;
+        text-align: center;
+        color: white;
+        background: linear-gradient(
+          hsl(252, 100%, 67%) 50%,
+          hsl(241, 81%, 54%)
+        );
+      }
+
+      .result > h4 {
+        font-weight: 800;
+      }
+
+      .summary {
+        flex-grow: 1;
+      }
+
+      .summary > h4 {
+        padding-left: 20px;
+        font-weight: 800;
+      }
+
+      .mark-div {
+        display: flex;
+        justify-content: center;
+      }
+
+      .mark {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100px;
+        height: 100px;
+        padding: 15%;
+        background: linear-gradient(
+          hsla(256, 72%, 46%, 1) 60%,
+          hsla(241, 72%, 46%, 0)
+        );
+        border-radius: 50%;
+        margin-bottom: 30px;
+        font-weight: 800;
+      }
+
+      .mark div:first-of-type {
+        font-size: 5rem;
+      }
+
+      .result > div:nth-of-type(2) {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      .result > div:last-of-type {
+        margin-top: 10px;
+        display: inline-block;
+        width: 300px;
+      }
+
+      .skills {
+        margin-top: 30px;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .skills div {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0.8rem;
+        border-radius: 0.5rem;
+      }
+
+      .skills > div:nth-of-type(1) {
+        background-color: hsl(0, 100%, 67%, 0.1);
+      }
+
+      .skills > div:nth-of-type(2) {
+        background-color: hsl(39, 100%, 56%, 0.1);
+      }
+
+      .skills > div:nth-of-type(3) {
+        background-color: hsl(166, 100%, 37%, 0.1);
+      }
+
+      .skills > div:nth-of-type(4) {
+        background-color: hsl(234, 85%, 45%, 0.1);
+      }
+
+      .skills-title {
+        display: flex;
+        gap: 10%;
+      }
+
+      span {
+        font-weight: 500;
+      }
+
+      .hundred {
+        opacity: 60%;
+      }
+
+      button {
+        font-size: 1rem;
+        font-weight: 800;
+        color: white;
+        background-color: hsl(224, 30%, 27%);
+        cursor: pointer;
+        border-radius: 2rem;
+        padding: 4% 15%;
+        margin-top: 30px;
+        width: 90%;
+        border: none;
+      }
+
+      .btn-div {
+        text-align: center;
+      }
+
+      @media (max-width: 625px) {
+        main {
+          flex-direction: column;
+          box-shadow: none;
+        }
+        .result {
+          border-top-left-radius: 0%;
+          border-top-right-radius: 0%;
+        }
+        body {
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+        .result > div:last-of-type {
+          padding-bottom: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="result">
+        <h4>Your Result</h4>
+        <div class="mark-div">
+          <div class="mark">
+            <div>76</div>
+            <div>of 100</div>
+          </div>
+        </div>
+        <div>Great</div>
+        <div>
+          You scored higher than 65% of the people who have taken these tests.
+        </div>
+      </div>
+      <div class="summary">
+        <h4>Summary</h4>
+        <div class="skills">
+          <div>
+            <div class="skills-title">
+              <img src="./assets/images/icon-reaction.svg" alt="reaction" />
+              <span style="color: hsl(0, 100%, 67%)">Reaction</span>
+            </div>
+            <div>80 <span class="hundred">&nbsp;/ 100</span></div>
+          </div>
+          <div>
+            <div class="skills-title">
+              <img src="./assets/images/icon-memory.svg" alt="memory" />
+              <span style="color: hsl(39, 100%, 56%)">Memory</span>
+            </div>
+            <div>92 <span class="hundred">&nbsp;/ 100</span></div>
+          </div>
+          <div>
+            <div class="skills-title">
+              <img src="./assets/images/icon-verbal.svg" alt="verbal" />
+              <span style="color: hsl(166, 100%, 37%)">Verbal</span>
+            </div>
+            <div>61 <span class="hundred">&nbsp;/ 100</span></div>
+          </div>
+          <div>
+            <div class="skills-title">
+              <img src="./assets/images/icon-visual.svg" alt="visual" />
+              <span style="color: hsl(234, 85%, 45%)">Visual</span>
+            </div>
+            <div>72 <span class="hundred">&nbsp;/ 100</span></div>
+          </div>
+        </div>
+        <div class="btn-div">
+          <button>Continue</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
